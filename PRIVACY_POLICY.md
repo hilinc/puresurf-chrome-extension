@@ -1,6 +1,6 @@
 # Privacy Policy for PureSurf
 
-**Last Updated: November 25, 2025**
+**Last Updated: November 27, 2025**
 
 ## Data Collection
 
