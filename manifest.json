@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PureSurf",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Block unnecessary content on web pages, such as privacy policy notifications",
   "action": {
     "default_popup": "popup.html",
