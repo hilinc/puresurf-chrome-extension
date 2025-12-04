@@ -1,9 +1,18 @@
 {
   "manifest_version": 3,
   "name": "PureSurf",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Block unnecessary content on web pages, such as privacy policy notifications",
-  "permissions": ["declarativeNetRequest"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "PureSurf"
+  },
+  "permissions": ["declarativeNetRequest", "tabs"],
   "host_permissions": ["<all_urls>"],
   "declarative_net_request": {
     "rule_resources": [
