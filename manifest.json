@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "PureSurf",
+  "name": "PopupsBlocker",
   "version": "1.2.0",
   "description": "Block unnecessary content on web pages, such as privacy policy notifications",
   "action": {
@@ -10,7 +10,7 @@
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     },
-    "default_title": "PureSurf"
+    "default_title": "PopupsBlocker"
   },
   "permissions": ["declarativeNetRequest"],
   "host_permissions": ["<all_urls>"],

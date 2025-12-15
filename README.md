@@ -1,4 +1,4 @@
-# PureSurf Chrome Extension
+# PopupsBlocker Chrome Extension
 
 A Chrome extension for blocking unnecessary content on web pages, with extensible rule support.
 
@@ -48,7 +48,7 @@ A Chrome extension for blocking unnecessary content on web pages, with extensibl
    - Select this project directory (the folder containing `manifest.json`)
 
 4. **Confirm Installation**
-   - Extension list should display "PureSurf"
+   - Extension list should display "PopupsBlocker"
    - Status should be enabled (blue toggle)
 
 ### Method 2: Packaged Installation
@@ -65,7 +65,7 @@ A Chrome extension for blocking unnecessary content on web pages, with extensibl
 1. After installation, the extension runs automatically on all web pages
 2. Visit any website with OneTrust privacy popups (many international sites)
 3. The extension automatically blocks privacy notifications - no manual action needed
-4. View `[PureSurf]` logs in browser console for interception details
+4. View `[PopupsBlocker]` logs in browser console for interception details
 
 ## 🔍 How It Works
 
@@ -110,21 +110,21 @@ Intercepts before script download for maximum efficiency.
 
 - ✅ No privacy policy/Cookie popups displayed
 - ✅ Page loads and displays normally
-- ✅ Console shows `[PureSurf]` interception logs
+- ✅ Console shows `[PopupsBlocker]` interception logs
 - ✅ Page scrolling works normally
 
 ### View Logs
 
 1. Open browser developer tools (F12 or Cmd+Option+I)
 2. Switch to "Console" tab
-3. Look for log messages with `[PureSurf]` prefix
+3. Look for log messages with `[PopupsBlocker]` prefix
 
 Example logs:
 
 ```
-[PureSurf] Content script loaded
-[PureSurf] Blocked script: https://cdn.cookielaw.org/scripttemplates/otSDKStub.js
-[PureSurf] Removed element: #onetrust-consent-sdk
+[PopupsBlocker] Content script loaded
+[PopupsBlocker] Blocked script: https://cdn.cookielaw.org/scripttemplates/otSDKStub.js
+[PopupsBlocker] Removed element: #onetrust-consent-sdk
 ```
 
 ## 🛠️ Technical Implementation
@@ -173,7 +173,7 @@ const observer = new MutationObserver(mutations => {
       if (node.tagName === "SCRIPT") {
         const src = node.src || "";
         if (src.includes("onetrust-consent-sdk") || src.includes("cdn.cookielaw.org")) {
-          console.log("[PureSurf] Blocked script:", src);
+          console.log("[PopupsBlocker] Blocked script:", src);
           node.remove();
         }
       }
@@ -195,7 +195,7 @@ setInterval(removeOneTrustElements, 500);
 ## 📁 Project Structure
 
 ```
-puresurf-chrome-extension/
+popups-blocker-chrome-extension/
 ├── manifest.json          # Extension configuration (Manifest V3)
 ├── content.js            # Content script (2.2KB)
 ├── rules.json            # declarativeNetRequest rules
@@ -222,7 +222,7 @@ puresurf-chrome-extension/
 
 1. Modify code files (manifest.json, content.js, rules.json)
 2. Go to `chrome://extensions/`
-3. Find PureSurf extension card
+3. Find PopupsBlocker extension card
 4. Click refresh icon 🔄
 5. Refresh test webpage to see effects
 
@@ -231,7 +231,7 @@ puresurf-chrome-extension/
 1. **View Interception Logs**
 
    ```
-   Open Console (F12) → Filter "[PureSurf]"
+   Open Console (F12) → Filter "[PopupsBlocker]"
    ```
 
 2. **Test Network Interception**
@@ -252,17 +252,17 @@ puresurf-chrome-extension/
 
 - Check if extension is enabled
 - Refresh test webpage (Cmd+R or Ctrl+R)
-- Check console for `[PureSurf]` logs
+- Check console for `[PopupsBlocker]` logs
 
 **Q: How to temporarily disable extension?**
 
 - Go to `chrome://extensions/`
-- Toggle off PureSurf switch
+- Toggle off PopupsBlocker switch
 
 **Q: How to uninstall extension?**
 
 - Go to `chrome://extensions/`
-- Click "Remove" button on PureSurf card
+- Click "Remove" button on PopupsBlocker card
 
 ## 🎨 Custom Icons (Optional)
 

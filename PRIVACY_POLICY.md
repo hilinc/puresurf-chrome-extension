@@ -1,14 +1,14 @@
-# Privacy Policy for PureSurf
+# Privacy Policy for PopupsBlocker
 
 **Last Updated: November 27, 2025**
 
 ## Data Collection
 
-PureSurf does not collect, store, or transmit any personal data or browsing information.
+PopupsBlocker does not collect, store, or transmit any personal data or browsing information.
 
 ## What the Extension Does
 
-PureSurf operates entirely locally on your device to:
+PopupsBlocker operates entirely locally on your device to:
 
 - Block cookie consent banners
 - Remove privacy policy popups
@@ -27,7 +27,7 @@ These permissions are used solely to provide the core functionality of blocking 
 
 ## Third-Party Services
 
-PureSurf does not use any third-party services, analytics, tracking tools, or external APIs.
+PopupsBlocker does not use any third-party services, analytics, tracking tools, or external APIs.
 
 ## Data Storage
 
